@@ -1,0 +1,73 @@
+.container {
+  --primary-color: #eb4468;
+
+  display: flex;
+  flex-direction: column;
+  padding: var(--pizza-card-padding, 12px);
+
+  align-items: center;
+  row-gap: var(--pizza-card-gap, 20px);
+
+  border-radius: var(--pizza-card-border-radius, 16px);
+
+  box-shadow: #959DA533 0px 0px 7px;
+}
+
+.toggles,
+.imageWrapper,
+.footer {
+  align-self: stretch;
+}
+
+.imageWrapper {
+  position: relative;
+  
+  aspect-ratio: 1.5;
+  
+  border-radius: var(--pizza-card-image-border-radius, 10px);
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions {
+  display: flex;
+  column-gap: 8px;
+}
+
+.add,
+.remove {
+  --button-padding: 8px;
+}
+
+.add {
+  --button-background: var(--primary-color);
+  --button-color: white;
+  --button-padding: 8px;
+}
+
+.remove {
+  --button-background: white;
+  --button-border: 1.5px var(--primary-color);
+  --button-color: var(--primary-color);
+}
+
+.countInCart {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  place-items: center;
+  place-content: center;
+
+  background-color: white;
+  border-radius: 50%;
+
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}

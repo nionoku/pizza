@@ -1,0 +1,53 @@
+.button {
+  --button-color-impl: var(--button-color, black);
+  --button-background-impl: var(--button-background, #F3F3F3);
+
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  column-gap: var(--button-gap, 6px);
+
+  padding: var(--button-padding, 10px);
+  border-radius: 50px;
+
+  border: none;
+  box-shadow: 0 0 0 var(--button-border, none) inset;
+  background-color: var(--button-background-impl);
+
+  color: var(--button-color-impl);
+
+  font-size: inherit;
+  
+  cursor: pointer;
+  user-select: none;
+
+  transition: 0.15s;
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--button-background-hover, color-mix(in srgb, var(--button-background-impl), transparent 20%));
+}
+
+.button:active:not(:disabled) {
+  background-color: var(--button-background-hover, color-mix(in srgb, var(--button-background-impl), black 5%));
+}
+
+.button:disabled {
+  color: color-mix(in srgb, var(--button-color-impl), transparent 50%);
+
+  cursor: not-allowed;
+}
+
+.beforeLabel,
+.afterLabel {
+  display: contents;
+}
+
+.contentWithMarginStart {
+  margin-inline-start: 4px;
+}
+
+.contentWithMarginEnd {
+  margin-inline-end: 4px;
+}

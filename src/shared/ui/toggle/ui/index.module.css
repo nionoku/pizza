@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  column-gap: var(--toggle-gap, 8px);
+
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  display: flex;
+  justify-content: var(--toggle-justify-content, center);
+
+  padding: var(--toggle-item-padding, 10px);
+  flex-grow: 1;
+  flex-basis: calc(100% / 3);
+
+  border-radius: 5px;
+}
+
+.label:hover:not(.labelActive) {
+  background-color: var(--toggle-item-background-hover, color-mix(in srgb, #F3F3F3, transparent 50%));
+}
+
+.labelActive {
+  background-color: var(--toggle-item-background-checked, #F3F3F3);
+}

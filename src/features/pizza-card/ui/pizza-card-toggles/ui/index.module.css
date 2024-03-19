@@ -1,0 +1,23 @@
+.container {
+  --toggle-item-background-hover: color-mix(in srgb, #fff, transparent 30%);
+  --toggle-item-background-checked: #fff;
+  --toggle-gap: 10px;
+  
+  --select-background-hover: color-mix(in srgb, #fff, transparent 30%);
+  --select-background-checked: #fff;
+  --select-text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--pizza-card-toggles-padding, 10px);
+
+  border-radius: var(--pizza-card-toggles-border-radius, 10px);
+  background-color: var(--pizza-card-toggles-bg, #F3F3F3);
+
+  row-gap: var(--pizza-card-toggles-gap, 10px);
+}
+
+.empty {
+  text-align: center;
+}

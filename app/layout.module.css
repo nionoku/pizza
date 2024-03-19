@@ -1,0 +1,37 @@
+.layout {
+  --outer-gap: 36px;
+  --border: 1px solid #F6F6F6;
+
+  margin: 0;
+  background-color: #FFDF8C;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  min-height: calc(100dvh - var(--outer-gap) * 2);
+  margin: var(--outer-gap);
+  border-radius: 10px;
+
+  background-color: white;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 12px 48px 24px;
+  border-bottom: var(--border);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 24px 48px;
+}
+
+.footer {
+  border-top: var(--border);
+  padding: 24px 48px 12px;
+}
